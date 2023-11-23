@@ -168,12 +168,5 @@ public class GamePositions {
 
 }
 ```
+
 그리고 나머지 `@OneToMany`의 필드인 GamePositions는 `@BatchSize` 를 해당 엔티티에 걸어 Lazy로 로딩해올 때 `in`을 이용해서 조회할 수 있도록 처리했습니다.(`@BatchSize`를 사용하지 않을 경우 만약 GamePosition의 데이터가 100개라면 쿼리가 100번 나가게 됩니다.)
-
-
-
-
-
-
-
-
