@@ -1,6 +1,6 @@
 ## 테스트 코드에서의 JPA 변경감지 동작 트러블 슈팅
 
-### 상황
+### 문제 상황
 ``` java  
     public Crew save(final Member member) {
         final AddressDepth1 addressDepth1 = addressSetup.findAddressDepth1("서울시");
@@ -32,7 +32,7 @@ crew와 member 테이블 사이에 crew_member 테이블이 중간 테이블로 
                 .build();
     }
 ```
-
+### 문제 발생
 잘못된 코드인 것을 알고 있었지만 이렇게 코드를 실행시켜보았을 때 `@Transactional` 이 붙은 테스트 코드에서 crew_member 테이블에 데이터 삽입이 한 번만 이루어지는 것을 확인해볼 수 있었습니다.
 
 > 근데 `@Transacional`이 붙어있으면 기본적으로 롤백이 되는건데 삽입 쿼리도 안나가야하는거 아냐?
