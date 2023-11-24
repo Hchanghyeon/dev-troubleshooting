@@ -66,6 +66,7 @@ public class CacheConfig {
 
 우선 Redis를 사용하기 위해 Config 설정을 지정합니다. RedisTemplate을 이용할 때 Key는 String, Value 값은 Object 형태로 했고 GenericJackson2를 이용할 때는 패키지 명까지 저장되어서 MSA 환경에서는 문제가 생길 수 있지만 현재 모놀리식 형태로 하고 있기 때문에 전혀 지장이 없을 것 같아서 사용했습니다. 추가로 Redis에 LocalDateTime을 저장할 때 역직렬화, 직렬화로 생기는 문제를 해결하기위해 ObjectMapper를 이용하였습니다.
 
+**RefreshToken.java**
 ``` java
 @Getter
 @Builder
@@ -80,6 +81,7 @@ public class RefreshToken {
 ```
 Redis에 담길 RefreshToken 객체입니다. token 그리고 해당 토큰을 가지고 있는 memberId, 생성된 시각을 담고 있습니다.
 
+**RedisRepository.java**
 ``` java
 
 @Repository
