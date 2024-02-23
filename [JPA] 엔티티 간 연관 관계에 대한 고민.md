@@ -113,6 +113,11 @@ public class MemberGames {
 
 하지만 코드를 읽기위해 `MemberService` -> `Member` -> `MemberGames` -> `MemberGame` -> `GameMember`의 흐름으로 따라가야하며, 이는 결국 하나의 비즈니스 로직을 구현하기 위한 코드를 한 곳에 모아서 보지 못하게되어 가독성을 떨어트리게 됩니다.
 
+수평적이라는 것은 아래 사진처럼 코드가 수평으로 타고 들어가서 읽는 것을 의미합니다. <br>
+
+![alt text](./image/jpa_relationship/image-2.png)
+
+
 ### 3. 연관 관계로 맺어진 Entity가 강결합되어 유지보수하기 어렵다.
 `MemberService` -> `Member` -> `MemberGames` -> `MemberGame` -> `GameMember`
 
