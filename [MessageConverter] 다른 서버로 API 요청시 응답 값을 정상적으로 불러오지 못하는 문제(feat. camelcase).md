@@ -138,6 +138,7 @@ public final class RestTemplateConfig {
 > RestTemplate와 함께 사용할 HttpMessageConverters를 설정합니다. 이 값을 설정하면 이전에 구성된 모든 변환기가 대체되고 빌드에서 구성된 모든 변환기가 RestTemplate의 기본 변환기를 대체합니다.
 
 **적용 후**
+
 ![alt text](./image/messageconverter_camelcase/image-6.png)
 
 적용 후 위 사진과 같이 데이터가 null이 아닌 정상 값으로 나오게 되었습니다.
