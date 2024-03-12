@@ -79,6 +79,7 @@ Spring 서버에서 외부 서버로 API 요청을 한 이후 응답을 받으�
 해당 자바 클래스를 확인해보면 기본 생성자로 생성시 Jacson2ObjectMapperBuilder.json().build()를 호출하는 것을 확인해볼 수 있습니다.
 
 **Jackson2ObjectMapperBuilder.java**
+
 ![alt text](./image/messageconverter_camelcase/image-5.png)
 
 호출하는 json() 메서드를 보게되면 별도의 설정 없이 객체를 생성해서 넘기는 것을 확인해볼 수 있습니다.
