@@ -60,11 +60,13 @@ public ResponseEntity<List<MemberGameResponse>> findAllCreatedGames(
 
 2. `@PathVariable` 어노테이션 <br>
 `@PathVariable` 어노테이션도 위와 마찬가지로 HandlerAdapter에서 컨트롤러 전에 처리되게 됩니다.
+
 **[DispatcherServlet doDispatch 메서드]**
   ![DispatcherServlet의 doDispatch 메서드](./image/aop_identification/image.png)
+  
 위 코드를 보면 HandlerAdapter를 가져와 ha.handle로 HandlerAdapter를 실행시키고 있는 것을 확인해볼 수 있습니다. HandlerAdapter는 인터페이스이기 때문에 구현체를 통해 실행되는데, 이때 `@PathVariable`은 PathVariableMethodArgumentResolver 클래스로부터 처리되고, `@Login`은 커스텀한 ArgumentResolver에 의해 처리됩니다.
 
-3. `@Identification` 어노테이션 <br>
+4. `@Identification` 어노테이션 <br>
 해당 어노테이션은 Spring AOP가 적용된 어노테이션으로 Spring AOP는 적용한 메서드의 전/후로 동작하게 됩니다. HandlerAdapter도 어찌보면 컨트롤러의 메서드가 동작하기 전/후로 처리되는 것이기 때문에 메서드의 전/후로 동작으로 볼 수 있지만 Spring AOP는 해당 클래스를 감싸고 있는 프록시 객체이기 때문에 HandlerAdapter보다 늦게 처리되는 것으로 볼 수 있습니다.
 
 결국 제가 했던 걱정과 달리, AOP는 ArgumentResolver가 먼저 처리된 이후 동작하기 때문에 문제 없이 컨트롤러에서도 동작할 수 있습니다.
