@@ -41,4 +41,6 @@
 ## 성능 개선, 코드 개선 
 [[Spatial Index, Fetch Join, Batch Size] 중심 좌표로 부터 특정 거리의 데이터 불러오기](https://github.com/Hchanghyeon/dev-troubleshooting/blob/main/%5BSpatial%20Index%2C%20Fetch%20Join%2C%20Batch%20Size%5D%20%EC%A4%91%EC%8B%AC%20%EC%A2%8C%ED%91%9C%EB%A1%9C%20%EB%B6%80%ED%84%B0%20%ED%8A%B9%EC%A0%95%20%EA%B1%B0%EB%A6%AC%EC%9D%98%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EB%B6%88%EB%9F%AC%EC%98%A4%EA%B8%B0.md)
 
-[[AOP] 공통된 검증 로직 AOP로 개선하기]()
+[[AOP] 공통된 검증 로직 AOP로 개선하기](https://github.com/Hchanghyeon/dev-troubleshooting/blob/main/%5BAOP%5D%20%EA%B3%B5%ED%86%B5%EB%90%9C%20%EA%B2%80%EC%A6%9D%20%EB%A1%9C%EC%A7%81%20AOP%EB%A1%9C%20%EA%B0%9C%EC%84%A0%ED%95%98%EA%B8%B0.md)
+
+[[캐시] 로컬 캐시(Caffeine) 적용기](https://github.com/Hchanghyeon/dev-troubleshooting/blob/main/%5B%EC%BA%90%EC%8B%9C%5D%20%EB%A1%9C%EC%BB%AC%20%EC%BA%90%EC%8B%9C(Caffeine)%20%EC%A0%81%EC%9A%A9%EA%B8%B0.md)
