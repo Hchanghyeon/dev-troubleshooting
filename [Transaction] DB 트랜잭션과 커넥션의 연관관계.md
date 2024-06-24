@@ -111,9 +111,9 @@ public class GameRankingDataSaveHandler {
 3. 이때 getTransaction()을 호출하게되는데 이 메서드를 타고 들어가보면 실제로 doBegin이라는 메서드가 사용되는 것을 확인해볼 수 있음
 
 #### JpaTransactionManager의 doBegin()
-![alt text](image.png)
+![alt text](/image/transaction/image.png)
 - doBeigin 메서드는 실제로 트랜잭션을 생성해야할 때 호출되는 메서드
-![alt text](Snipaste_2024-06-24_21-24-15.png)
+![alt text](/image/transaction/Snipaste_2024-06-24_21-24-15.png)
 - 해당하는 부분을 보면 getJdbcConnection을 불러오는 코드가 있음
 
 뒷 부분의 로직도 더 있지만 현재 제가 겪고있는 문제와는 상관이 없는 내용이기에 적지 않겠습니다.
